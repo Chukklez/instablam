@@ -1,16 +1,16 @@
-import React from "react"
-import Webcam from "react-webcam"
+import React from 'react';
+import Webcam from 'react-webcam';
 
-function webcam() {
-    return (
-        <>
-        <Webcam 
-        height={480}
-        width={480}
-        />
-        </>
-    )
+const videoConstraints = {
+  facingMode: 'user',
+};
 
-}
-
-export default webcam
+<Webcam
+  audio={false}
+  ref={webcamRef}
+  height={400}
+  width={300}
+  videoConstraints={videoConstraints}
+  screenshotFormat="image/jpeg"
+/>;
+export default Webcam;
