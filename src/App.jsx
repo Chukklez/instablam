@@ -4,7 +4,7 @@ import Webcam from './components/Webcam'
 
 function App () {
   return (
-    <div>
+    <div className="webcam-container">
       <Webcam />
     </div>
   )
