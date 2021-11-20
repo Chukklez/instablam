@@ -5,12 +5,19 @@ const videoConstraints = {
   facingMode: 'user',
 };
 
-<Webcam
-  audio={false}
-  ref={webcamRef}
-  height={400}
-  width={300}
-  videoConstraints={videoConstraints}
-  screenshotFormat="image/jpeg"
-/>;
+const WebcamCapture = () => {
+  const webcamRef = React.useRef(null);
+
+  return (
+    <Webcam
+      audio={false}
+      ref={webcamRef}
+      height={400}
+      width={300}
+      videoConstraints={videoConstraints}
+      screenshotFormat="image/jpeg"
+    />
+  );
+};
+
 export default Webcam;
